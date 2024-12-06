@@ -27,7 +27,6 @@ public class PaperAuthorController {
 
     @GetMapping(value = "/GetAuthorList")
     @ApiOperation("通过论文id查询作者信息")
-    @Authentication(requireAdmin = true)
     public ApiResultUtils getAuthorList(@RequestParam(value = "paperId") Integer paperId) {
         return paperAuthorService.getAuthorList(paperId);
     }
